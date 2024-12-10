@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-from setuptools.config.expand import entry_points
 
 setup(
     name="Pass Guard",
