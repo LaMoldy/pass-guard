@@ -1,4 +1,4 @@
-from gui.main_window import MainWindow
+from pass_guard.gui.main_window import MainWindow
 
 def main():
     main_window = MainWindow()

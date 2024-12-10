@@ -2,3 +2,4 @@ bcrypt==4.2.1
 customtkinter==5.2.2
 pytest==8.3.4
 setuptools==75.6.0
+PyInstaller==6.11.1

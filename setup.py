@@ -1,4 +1,26 @@
-from setuptools import setup, find_packages
+import subprocess
+from setuptools import Command, find_packages, setup
+
+class BuildExeCommand(Command):
+    """Custom command to build an .exe using PyInstaller."""
+    description = "Build an .exe file using PyInstaller"
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        # Call PyInstaller to generate the executable
+        subprocess.check_call([
+            "pyinstaller",
+            "--onefile",
+            "--name=passguard",
+            "--noconsole",
+            "pass_guard/main.py"
+        ])
 
 setup(
     name="Pass Guard",
@@ -26,8 +48,11 @@ setup(
     python_requires=">=3.8",
     entry_points={
         "console_scripts": [
-            "pass-guard=pass-guard.main:main"
+            "pass-guard=pass_guard.main:main"
         ]
+    },
+    cmdclass={
+        "build_exe": BuildExeCommand,
     },
     include_package_data=True,
     package_data={
