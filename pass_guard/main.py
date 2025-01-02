@@ -1,9 +1,9 @@
-from pass_guard.gui import App, Login
+from pass_guard.gui import App, Setup
 
 def main():
     app = App()
-    login_frame = Login(app)
-    login_frame.pack(padx=0, pady=100)
+    setup_frame = Setup(app)
+    setup_frame.pack(padx=10, pady=150)
     app.mainloop()
 
 if __name__ == "__main__":
