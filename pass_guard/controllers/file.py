@@ -1,19 +1,20 @@
 class File():
     @staticmethod
-    def create_file(file_name: str) -> bool:
+    def create(file_name: str) -> bool:
         try:
-            f = open("credential.enc", "x")
+            f = open(file_name, "x")
             return True
         except FileExistsError:
             return False
 
     @staticmethod
-    def read_file(file_path: str) -> tuple[str, bool]:
+    def read(file_path: str) -> tuple[str, bool]:
         try:
             f = open(file_path, "r")
             return f.read(), True
-        return "", False
-    
+        except:
+            return "", False
+
     @staticmethod
-    def check_file_exists(file_path: str) -> bool:
+    def exists(file_path: str) -> bool:
         return False

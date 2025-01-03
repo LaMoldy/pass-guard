@@ -3,13 +3,13 @@ import platform
 from PIL import ImageTk
 
 class App(customtkinter.CTk):
-    TITLE              = "PassGuard"
-    WIDTH              = 800
-    HEIGHT             = 500
-    WIDTH_RESIZABLE    = False
-    HEIGHT_RESIZABLE   = False
-    WINDOW_ICON        = "pass_guard/assets/logo.ico"
-    WINDOW_IMAGE       = "pass_guard/assets/logo.png"
+    TITLE = "PassGuard"
+    WIDTH = 800
+    HEIGHT = 500
+    WIDTH_RESIZABLE = False
+    HEIGHT_RESIZABLE = False
+    WINDOW_ICON = "pass_guard/assets/logo.ico"
+    WINDOW_IMAGE = "pass_guard/assets/logo.png"
     DEFAULT_APPEARANCE = "light"
 
     def __init__(self):

@@ -17,11 +17,19 @@ class Setup(customtkinter.CTkFrame):
             master=self,
             placeholder_text="abc123",
             width=400,
-            height=35,
+            height=35
         )
         self.set_password_entry.grid(row=1, column=0, columnspan=2, padx=10, pady=10)
         self.set_password_entry.configure(show="*", justify="center")
 
+        self.error_message_label = customtkinter.CTkLabel(
+            master=self,
+            text="Hello",
+            font=("SegoeUI", 14, "bold"),
+            text_color="red"
+        )
+        self.error_message_label.grid(row=2, column=0, columnspan=2, padx=3, pady=3)
+        
         self.toggle_password_button = customtkinter.CTkButton(
             master=self,
             text="Toggle Password Visibility",
@@ -29,15 +37,15 @@ class Setup(customtkinter.CTkFrame):
             height=40,
             command=self.toggle_password_visibility
         )
-        self.toggle_password_button.grid(row=2, column=0, padx=10, pady=5)
+        self.toggle_password_button.grid(row=3, column=0, padx=10, pady=5)
 
         self.submit_password_button = customtkinter.CTkButton(
             master=self,
             text="Submit",
             width=195,
-            height=40,
+            height=40
         )
-        self.submit_password_button.grid(row=2, column=1, padx=10, pady=5)
+        self.submit_password_button.grid(row=3, column=1, padx=10, pady=5)
 
 
     def toggle_password_visibility(self):
@@ -47,3 +55,5 @@ class Setup(customtkinter.CTkFrame):
         else:
             self.set_password_entry.configure(show="")
             self.password_visible = True
+
+        

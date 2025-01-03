@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from cx_Freeze import Executable
 
 build_exe_options = {
-    "packages": [],
+    "packages": ["os", "platform"],
     "includes": [],
     "include_files": ["passguard/"]
 }
